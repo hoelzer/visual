@@ -10,6 +10,6 @@ An simple example plot using the _circlize_ [package](https://jokergoo.github.io
 Rscript circlize_nanopore_phage.R
 ````
 
-![circlize_nanopore_phage.pdf]
+![Example PDF image of the scripts output](https://github.com/hoelzer/visual/blob/master/circlize_nanopore_phage.pdf)
 
 Labels can be easily adjusted by using [Inkscape](https://inkscape.org), for example.
