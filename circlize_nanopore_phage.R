@@ -8,6 +8,7 @@ library(viridis) # access to nice color palettes
 
 circos.clear()
 pdf('circlize_nanopore_phage.pdf', width=4, height=4)
+#png('circlize_nanopore_phage.png', width=4, height=4)
 
 df = data.frame(
     name  = c('Putative phage sequence'),
