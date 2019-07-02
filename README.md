@@ -1,6 +1,6 @@
 # Visual
 
-A collection of small scripts/templates for data visualisation. 
+A (hopefully growing) collection of small scripts/templates for data visualisation. 
 
 ## Circular genome plot with _circlize_
 
