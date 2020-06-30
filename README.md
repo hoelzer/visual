@@ -19,21 +19,21 @@ Labels can be easily adjusted by using [Inkscape](https://inkscape.org), for exa
 If you have >3 sets to show overlaps, the _UpSetR_ [package](https://github.com/hms-dbmi/UpSetR) is great. 
 
 ```bash
-conda create -n upsetr
+conda create -n upsetr -c bioconda r-upsetr
 conda activate upsetr
-conda install -c bioconda r-upsetr
-```
-
-```R
 Rscript upsetr/upset.R
 ```
 
-![Example PNG image of the scripts output](https://github.com/hoelzer/visual/blob/master/upsetr/upsetr.svg)
+![Example SVG image of the scripts output](https://github.com/hoelzer/visual/blob/master/upsetr/upsetr.svg)
 
 ## Balloon plot
 
 ```bash
 conda create -n balloon -c r r-ggplot2 r-dplyr r-tidyr r-svglite
+conda activate balloon
 Rscript balloon/balloon.R 
 ```
+
+![Example SVG image of the scripts output](https://github.com/hoelzer/visual/blob/master/balloon/balloon.svg)
+
 
