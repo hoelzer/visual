@@ -31,7 +31,7 @@ Rscript upsetr/upset.R
 ```bash
 conda create -n balloon -c r r-ggplot2 r-dplyr r-tidyr r-svglite
 conda activate balloon
-Rscript balloon/balloon.R 
+Rscript balloon/balloon.R balloon/tara.tsv balloon/balloon.svg 10 8  
 ```
 
 ![Example SVG image of the scripts output](https://github.com/hoelzer/visual/blob/master/balloon/balloon.svg)

@@ -5,8 +5,10 @@ library(tidyr)
 library(ggplot2)
 library(svglite)
 
+args = commandArgs(trailingOnly = TRUE)
+
 cols <- c('name', 'vore', 'variable', 'value')
-df.virify <- as_tibble(read.table('balloon/tara.tsv'))
+df.virify <- as_tibble(read.table(args[1]))
 names(df.virify) <- cols
 
 # add a "row" column which will be the y position in the plot: group by vore and name, then set "row" as group index
@@ -46,5 +48,6 @@ plot <- ggplot(df.virify, aes(x=factor(col), y=factor(row), color=vore, size=val
         panel.grid.minor.x = element_blank(),   # disable lines in grid on X-axis
         axis.text.x = element_text(angle = 90))  # rotate x axis labels
 
-ggsave(file="balloon/balloon.svg", plot=plot, width=10, height=8)
+ggsave(file=args[2], plot=plot, width=as.numeric(args[3]), height=as.numeric(args[4]))
+ggsave(file=sub('.svg','.pdf',args[2]), plot=plot, width=as.numeric(args[3]), height=as.numeric(args[4]))
 
