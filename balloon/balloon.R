@@ -15,7 +15,7 @@ names(df.virify) <- cols
 df.virify <- df.virify %>% mutate(row = group_indices_(df.virify, .dots=c('name')))
 
 # define order of columns in the plot, sort df.virify
-order <- c("genus", "family", "subfamily", "species")
+order <- c("order", "family", "subfamily", "genus")
 df.virify <- df.virify %>% 
     mutate(vore =  factor(vore, levels = order)) %>%
     arrange(vore)
